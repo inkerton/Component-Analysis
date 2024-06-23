@@ -1,0 +1,6 @@
+# No env files on git
+# .env
+# /*.env
+
+# Node_modules
+node_modules
