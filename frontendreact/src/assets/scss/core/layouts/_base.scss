@@ -1,0 +1,95 @@
+// Global styling for .nk-content
+
+body {
+  min-width: $min-body-width;
+
+  &.nav-shown {
+    overflow: hidden !important;
+  }
+}
+
+.nk {
+  &-body {
+    outline: none;
+  }
+
+  &-app {
+    &-root {
+      outline: none;
+    }
+  }
+
+  &-main {
+    position: relative;
+  }
+
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    // background: url('../../../images/grid.svg') repeat;
+    // background: url('../../../images/grid.svg') repeat, radial-gradient(circle at 64% 50%, rgb(143, 164, 248), rgb(143, 164, 248));
+    @media (max-width: YOUR_BREAKPOINT) {
+      // Additional styles for smaller screens...
+    }
+  }
+
+  &-content {
+    padding: $content-gap-y 4px;
+
+    &-fs {
+      min-height: calc(100vh - (#{$header-height} + #{$header-height}));
+      display: flex;
+      align-items: center;
+    }
+
+    // Apply additional styles for specific breakpoints
+    @include media-breakpoint-up(sm) {
+      padding: ($content-gap-y + 8) $content-gap-x-sm;
+
+      &-fluid {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &-lg {
+        padding-top: ($content-gap-y * 1.5);
+        padding-bottom: ($content-gap-y * 1.5);
+      }
+
+      &-fluid {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+
+    @media (min-width: 1660px) {
+      &-lg {
+        padding-top: ($content-gap-y * 2.25);
+        padding-bottom: ($content-gap-y * 2.25);
+      }
+
+      &-fluid {
+        padding-left: 44px;
+        padding-right: 44px;
+      }
+    }
+  }
+}
+
+// Content
+.nk-content-body {
+  flex-grow: 1;
+}
+
+.nk-wrap-nosidebar {
+  .nk-content {
+    padding: 0 !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,36 @@
+.program_form_divider {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 2px solid #706bfdec;
+}
+
+.err_msg {
+  color: rgba(226, 71, 97, 0.842);
+  margin-top: 4px;
+  padding-left: 2px;
+  position: absolute;
+}
+
+.remove_btn {
+  display: flex;
+  height: auto;
+  align-items: flex-end;
+}
+
+.remove_btn > button {
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.inputInvalid {
+  outline: 1px solid red;
+}
+
+input.inputInvalid:focus {
+  border: none;
+  outline: 1px solid red;
+}
